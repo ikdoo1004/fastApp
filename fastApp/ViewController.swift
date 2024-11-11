@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+/*
     @IBAction func registerNotAvailable(_ sender: Any) {
         let alert = UIAlertController(title: "Alert", message: "No Register process is yet available.", preferredStyle: .alert)
 
@@ -25,6 +25,6 @@ class ViewController: UIViewController {
                 // This part of code inits alert view
                 self.present(alert, animated: true, completion: nil)
     }
-    
+    */
 }
 
