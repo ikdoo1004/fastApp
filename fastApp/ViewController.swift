@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    /*
     struct User: Codable {
         let name: String
         let email: String
@@ -20,11 +22,15 @@ class ViewController: UIViewController {
     var newEmail = ""
     var newPhone = ""
     var newPassword = ""
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let runner = UIImage.gifImageWithName("runner")
+        imageView.image = runner
     }
+    
     /*
     @IBAction func nameInput(_ sender: Any) {
     }
@@ -34,7 +40,7 @@ class ViewController: UIViewController {
     }
     @IBAction func passwordInput(_ sender: Any) {
     }
-    */
+    *
     @IBAction func registerButton(_ sender: Any) {
         if newName.isEmpty || newEmail.isEmpty || newPhone.isEmpty || newPassword.isEmpty {
             let alert = UIAlertController(title: "Alert", message: "Please fill in all the fields.", preferredStyle: .alert)
@@ -50,7 +56,7 @@ class ViewController: UIViewController {
             
         }
     }
-    /*
+    
     @IBAction func registerNotAvailable(_ sender: Any) {
         let alert = UIAlertController(title: "Alert", message: "No Register process is yet available.", preferredStyle: .alert)
 
