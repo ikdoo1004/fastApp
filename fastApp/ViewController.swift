@@ -31,6 +31,18 @@ class ViewController: UIViewController {
         imageView.image = runner
     }
     
+    func validate(user:String) -> Bool {
+        return !user.isEmpty
+    }
+    
+    @IBAction func loginAction(_ sender: Any) {
+        print("Button Action Log: Login Clicked!")
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        
+        if let objLoginVC = loginVC{
+            self.navigationController?.pushViewController(objLoginVC, animated: true)
+        }
+    }
     /*
     @IBAction func nameInput(_ sender: Any) {
     }
