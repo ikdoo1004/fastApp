@@ -7,6 +7,15 @@
 
 import UIKit
 
-class downloadsVC : UIViewController {
+class DownloadVC : UIViewController {
     
+    @IBOutlet weak var downloadTabItem: UITabBarItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        downloadTabItem.badgeValue = nil
+    }
 }

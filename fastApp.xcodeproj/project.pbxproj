@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9E40C5752CE279CD006FCDFA /* Exceptions for "fastApp" folder in "fastApp" target */ = {
+		9EA29DB12CE5367B00E3BEDE /* Exceptions for "fastApp" folder in "fastApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -24,7 +24,7 @@
 		9E40C5652CE279CC006FCDFA /* fastApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9E40C5752CE279CD006FCDFA /* Exceptions for "fastApp" folder in "fastApp" target */,
+				9EA29DB12CE5367B00E3BEDE /* Exceptions for "fastApp" folder in "fastApp" target */,
 			);
 			path = fastApp;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fastApp/Info.plist;
+				INFOPLIST_FILE = /Users/kim_ikdoo/Documents/GitHub/fastApp/fastApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GottaGoFast;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -174,7 +174,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fastApp/Info.plist;
+				INFOPLIST_FILE = /Users/kim_ikdoo/Documents/GitHub/fastApp/fastApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GottaGoFast;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
