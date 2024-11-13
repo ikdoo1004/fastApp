@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let runner = UIImage.gifImageWithName("runner")
-        imageView.image = runner
+//        let runner = UIImage.gifImageWithName("runner")
+//        imageView.image = runner
     }
     
     func validate(user:String) -> Bool {
@@ -82,4 +82,3 @@ class ViewController: UIViewController {
     }
     */
 }
-
