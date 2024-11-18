@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     @IBAction func passwordInput(_ sender: Any) {
     }
-    *
+    
     @IBAction func registerButton(_ sender: Any) {
         if newName.isEmpty || newEmail.isEmpty || newPhone.isEmpty || newPassword.isEmpty {
             let alert = UIAlertController(title: "Alert", message: "Please fill in all the fields.", preferredStyle: .alert)
@@ -80,5 +80,10 @@ class ViewController: UIViewController {
                 // This part of code inits alert view
                 self.present(alert, animated: true, completion: nil)
     }
+     Tasks: connect GetOTP and make function for that (sending 4 digit) through Youtube
+     Find more various designs on web
+     Tab Bar, do we need more functions other than current? - Implement functions for each (history, download, search or HOME)
+     
+     Still Landscape mode can't be successful.
     */
 }
