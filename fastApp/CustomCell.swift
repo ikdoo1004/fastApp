@@ -9,6 +9,8 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var subLabel: UILabel!
+    @IBOutlet weak var songName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
