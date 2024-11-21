@@ -9,27 +9,42 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-//    @IBOutlet weak var num: UILabel!
-//    @IBOutlet weak var titleLabel: UILabel!
-//    var count = 0
-
+//    @IBOutlet weak var user_name: UITextField!
+//   @IBOutlet weak var user_pw: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
-        //titleLabel.text = "yayee"
-        //num.text = String(count)
-        
     }
-/*
-    @IBAction func isUpTapped(_ sender: Any) {
-        count = count + 1
-        num.text = String(count)
+    /*
+    @IBAction func loginCheck(_ sender: Any) {
+        guard let enteredEmail = user_name.text, !enteredEmail.isEmpty,
+              let enteredPassword = user_pw.text, !enteredPassword.isEmpty else {
+            showAlert(message: "Please fill in both fields.")
+            return
+        }
+        
+        // credential check
+        if validateCredentials(email: enteredEmail, password: enteredPassword) {
+            // If authenticated valid, transition to main content
+            if let tabBarVC = storyboard?.instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController {
+                navigationController?.pushViewController(tabBarVC, animated: true)
+            }
+        } else {
+            showAlert(message: "Invalid email or password. Please try again.")
+        }
     }
     
-    @IBAction func isDownTapped(_ sender: Any) {
-        count = count - 1
-        num.text = String(count)
+    // check validation with account storage
+    private func validateCredentials(email: String, password: String) -> Bool {
+        return Accounts.users.contains { $0.userEmail == email && $0.userPassword == password }
+    }
+    
+    // alert for errors
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }*/
 }
 

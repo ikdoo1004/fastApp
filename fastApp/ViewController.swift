@@ -3,26 +3,26 @@
 //  fastApp
 //
 //  Created by 김익두 on 11/11/24.
-//
+//  Main view controller (Title screen)
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     /*
-    struct User: Codable {
-        let name: String
-        let email: String
-        let phone: String
-        let password: String
-    }
-    
-    var newName = ""
-    var newEmail = ""
-    var newPhone = ""
-    var newPassword = ""
-    */
+     struct User: Codable {
+     let name: String
+     let email: String
+     let phone: String
+     let password: String
+     }
+     
+     var newName = ""
+     var newEmail = ""
+     var newPhone = ""
+     var newPassword = ""
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,24 @@ class ViewController: UIViewController {
         return !user.isEmpty
     }
     
+    @IBAction func exitApp(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "You are just halfway..",
+            message: "It always seems impossible until it's done.",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "GIVE UP", style: .destructive, handler: { _ in
+            // Exit the app
+            exit(0)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Never give up", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func loginAction(_ sender: Any) {
         print("Button Action Log: Login Clicked!")
         let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
@@ -44,46 +62,46 @@ class ViewController: UIViewController {
         }
     }
     /*
-    @IBAction func nameInput(_ sender: Any) {
-    }
-    @IBAction func emailInput(_ sender: Any) {
-    }
-    @IBAction func phoneInput(_ sender: Any) {
-    }
-    @IBAction func passwordInput(_ sender: Any) {
-    }
-    
-    @IBAction func registerButton(_ sender: Any) {
-        if newName.isEmpty || newEmail.isEmpty || newPhone.isEmpty || newPassword.isEmpty {
-            let alert = UIAlertController(title: "Alert", message: "Please fill in all the fields.", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-            }
-                                         )
-            )
-        } else {
-            User.init(name: newName, email: newEmail, phone: newPhone, password: newPassword)
-            let note = "\(newName) has been registered.\nPlease login to your account."
-            
-        }
-    }
-    
-    @IBAction func registerNotAvailable(_ sender: Any) {
-        let alert = UIAlertController(title: "Alert", message: "No Register process is yet available.", preferredStyle: .alert)
-
-                // You can add actions using the following code
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-                }))
-
-                // This part of code inits alert view
-                self.present(alert, animated: true, completion: nil)
-    }
+     @IBAction func nameInput(_ sender: Any) {
+     }
+     @IBAction func emailInput(_ sender: Any) {
+     }
+     @IBAction func phoneInput(_ sender: Any) {
+     }
+     @IBAction func passwordInput(_ sender: Any) {
+     }
+     
+     @IBAction func registerButton(_ sender: Any) {
+     if newName.isEmpty || newEmail.isEmpty || newPhone.isEmpty || newPassword.isEmpty {
+     let alert = UIAlertController(title: "Alert", message: "Please fill in all the fields.", preferredStyle: .alert)
+     
+     alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
+     NSLog("The \"OK\" alert occured.")
+     }
+     )
+     )
+     } else {
+     User.init(name: newName, email: newEmail, phone: newPhone, password: newPassword)
+     let note = "\(newName) has been registered.\nPlease login to your account."
+     
+     }
+     }
+     
+     @IBAction func registerNotAvailable(_ sender: Any) {
+     let alert = UIAlertController(title: "Alert", message: "No Register process is yet available.", preferredStyle: .alert)
+     
+     // You can add actions using the following code
+     alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
+     NSLog("The \"OK\" alert occured.")
+     }))
+     
+     // This part of code inits alert view
+     self.present(alert, animated: true, completion: nil)
+     }
      Tasks: connect GetOTP and make function for that (sending 4 digit) through Youtube
      Find more various designs on web
      Tab Bar, do we need more functions other than current? - Implement functions for each (history, download, search or HOME)
      
      Still Landscape mode can't be successful.
-    */
+     */
 }
