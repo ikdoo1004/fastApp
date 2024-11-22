@@ -9,17 +9,17 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-//    @IBOutlet weak var user_name: UITextField!
-//   @IBOutlet weak var user_pw: UITextField!
+    @IBOutlet weak var enterEmail: UITextField!
+    @IBOutlet weak var enterPWD: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    /*
+    
     @IBAction func loginCheck(_ sender: Any) {
-        guard let enteredEmail = user_name.text, !enteredEmail.isEmpty,
-              let enteredPassword = user_pw.text, !enteredPassword.isEmpty else {
+        guard let enteredEmail = enterEmail.text, !enteredEmail.isEmpty,
+              let enteredPassword = enterPWD.text, !enteredPassword.isEmpty else {
             showAlert(message: "Please fill in both fields.")
             return
         }
@@ -45,6 +45,6 @@ class LoginVC: UIViewController {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
-    }*/
+    }
 }
 

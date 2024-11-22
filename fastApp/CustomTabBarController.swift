@@ -14,5 +14,4 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
         selectedIndex = initialIndex
     }
-    
 }

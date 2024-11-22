@@ -61,47 +61,5 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(objLoginVC, animated: true)
         }
     }
-    /*
-     @IBAction func nameInput(_ sender: Any) {
-     }
-     @IBAction func emailInput(_ sender: Any) {
-     }
-     @IBAction func phoneInput(_ sender: Any) {
-     }
-     @IBAction func passwordInput(_ sender: Any) {
-     }
-     
-     @IBAction func registerButton(_ sender: Any) {
-     if newName.isEmpty || newEmail.isEmpty || newPhone.isEmpty || newPassword.isEmpty {
-     let alert = UIAlertController(title: "Alert", message: "Please fill in all the fields.", preferredStyle: .alert)
-     
-     alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
-     NSLog("The \"OK\" alert occured.")
-     }
-     )
-     )
-     } else {
-     User.init(name: newName, email: newEmail, phone: newPhone, password: newPassword)
-     let note = "\(newName) has been registered.\nPlease login to your account."
-     
-     }
-     }
-     
-     @IBAction func registerNotAvailable(_ sender: Any) {
-     let alert = UIAlertController(title: "Alert", message: "No Register process is yet available.", preferredStyle: .alert)
-     
-     // You can add actions using the following code
-     alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "This closes alert"), style: .default, handler: { _ in
-     NSLog("The \"OK\" alert occured.")
-     }))
-     
-     // This part of code inits alert view
-     self.present(alert, animated: true, completion: nil)
-     }
-     Tasks: connect GetOTP and make function for that (sending 4 digit) through Youtube
-     Find more various designs on web
-     Tab Bar, do we need more functions other than current? - Implement functions for each (history, download, search or HOME)
-     
-     Still Landscape mode can't be successful.
-     */
+    
 }

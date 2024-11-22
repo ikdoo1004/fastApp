@@ -36,11 +36,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             present(alert, animated: true, completion: nil)
             return
         }
-        /*
+        
         let newUser = userAccount(userName: name, userPassword: password, userEmail: email, userPhone: phone)
         
         Accounts.users.append(newUser)
-        */
+        
         if let doubleCheckVC = storyboard?.instantiateViewController(withIdentifier: "DoubleCheckVC") as? DoubleCheckVC {
             
             doubleCheckVC.nameStr = name
@@ -48,7 +48,6 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             doubleCheckVC.phoneStr = phone
             doubleCheckVC.pwStr = password
             
-            // Navigate to DoubleCheckVC
             navigationController?.pushViewController(doubleCheckVC, animated: true)
         }
     }
